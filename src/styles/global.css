@@ -2956,3 +2956,175 @@ body {
         border-radius: 22px;
     }
 }
+
+.ci-industries-hero {
+    min-height: calc(92vh - 84px);
+    background:
+            radial-gradient(900px 440px at 16% 8%, rgba(37, 99, 235, 0.46), transparent 58%),
+            radial-gradient(760px 420px at 88% 18%, rgba(141, 216, 255, 0.26), transparent 56%),
+            linear-gradient(135deg, #020817 0%, #06152f 45%, #0a1f44 100%);
+}
+
+.ci-industries-command {
+    min-height: 560px;
+    border-radius: var(--ci-radius-xl);
+    padding: 28px;
+    background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.06)),
+            radial-gradient(circle at 50% 30%, rgba(96, 165, 250, 0.2), transparent 42%);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: var(--ci-shadow-lg);
+    backdrop-filter: blur(18px);
+}
+
+.ci-industries-sector-list {
+    display: grid;
+    gap: 26px;
+}
+
+.ci-industry-sector-card {
+    position: relative;
+    overflow: hidden;
+    padding: 34px;
+    border-radius: var(--ci-radius-xl);
+    background:
+            radial-gradient(540px 220px at 10% 0%, rgba(96, 165, 250, 0.15), transparent 58%),
+            radial-gradient(420px 200px at 100% 10%, rgba(187, 251, 255, 0.18), transparent 58%),
+            rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(37, 99, 235, 0.14);
+    box-shadow: var(--ci-shadow-md);
+}
+
+.ci-industry-sector-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), transparent 42%);
+    opacity: 0;
+    transition: opacity var(--ci-transition);
+    pointer-events: none;
+}
+
+.ci-industry-sector-card:hover::before {
+    opacity: 1;
+}
+
+.ci-industry-sector-head {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.ci-industry-sector-head h3 {
+    color: var(--ci-navy-900);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    line-height: 1.02;
+    letter-spacing: -0.05em;
+    font-weight: 950;
+    margin: 14px 0 0;
+}
+
+.ci-industry-sector-body {
+    position: relative;
+    display: grid;
+    gap: 16px;
+}
+
+.ci-industry-sector-body p {
+    color: #536780;
+    font-size: 1rem;
+    line-height: 1.86;
+    margin: 0;
+}
+
+.ci-industries-insight-panel {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 28px;
+    padding: 38px;
+    border-radius: var(--ci-radius-xl);
+    background:
+            radial-gradient(580px 260px at 8% 0%, rgba(37, 99, 235, 0.16), transparent 58%),
+            linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(248, 251, 255, 0.92));
+    border: 1px solid rgba(37, 99, 235, 0.14);
+    box-shadow: var(--ci-shadow-md);
+}
+
+.ci-industries-insight-icon {
+    width: 92px;
+    height: 92px;
+    display: grid;
+    place-items: center;
+    border-radius: 28px;
+    color: var(--ci-white);
+    background: linear-gradient(135deg, var(--ci-blue-600), var(--ci-blue-300));
+    box-shadow: var(--ci-glow-blue);
+}
+
+.ci-industries-insight-content {
+    display: grid;
+    gap: 16px;
+}
+
+.ci-industries-insight-content p {
+    color: #536780;
+    line-height: 1.86;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .ci-industries-hero {
+        min-height: auto;
+    }
+
+    .ci-industries-command {
+        min-height: auto;
+    }
+
+    .ci-industry-sector-card {
+        padding: 26px;
+        text-align: center;
+    }
+
+    .ci-industry-sector-head {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ci-industry-sector-body p {
+        text-align: center;
+    }
+
+    .ci-industries-insight-panel {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .ci-industries-insight-content p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .ci-industry-sector-card,
+    .ci-industries-insight-panel {
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .ci-industry-sector-head h3 {
+        font-size: 1.65rem;
+    }
+
+    .ci-industries-insight-icon {
+        width: 76px;
+        height: 76px;
+        border-radius: 22px;
+    }
+}
