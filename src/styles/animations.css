@@ -1,0 +1,243 @@
+@keyframes ciFloat {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(0, -18px, 0) scale(1.04);
+    }
+}
+
+@keyframes ciPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.38);
+    }
+    50% {
+        box-shadow: 0 0 0 14px rgba(96, 165, 250, 0);
+    }
+}
+
+@keyframes ciShine {
+    0% {
+        transform: translateX(-120%) skewX(-18deg);
+    }
+    100% {
+        transform: translateX(220%) skewX(-18deg);
+    }
+}
+
+@keyframes ciRevealUp {
+    from {
+        opacity: 0;
+        transform: translateY(34px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ciRevealLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-34px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes ciRevealRight {
+    from {
+        opacity: 0;
+        transform: translateX(34px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes ciScanLine {
+    0% {
+        transform: translateY(-120%);
+        opacity: 0;
+    }
+    20%, 80% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(120%);
+        opacity: 0;
+    }
+}
+
+@keyframes ciGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Utility animation classes */
+
+.ci-animate-up {
+    animation: ciRevealUp 0.8s var(--ci-transition-slow) both;
+}
+
+.ci-animate-left {
+    animation: ciRevealLeft 0.8s var(--ci-transition-slow) both;
+}
+
+.ci-animate-right {
+    animation: ciRevealRight 0.8s var(--ci-transition-slow) both;
+}
+
+.ci-delay-1 {
+    animation-delay: 0.12s;
+}
+
+.ci-delay-2 {
+    animation-delay: 0.24s;
+}
+
+.ci-delay-3 {
+    animation-delay: 0.36s;
+}
+
+.ci-delay-4 {
+    animation-delay: 0.48s;
+}
+
+.ci-pulse {
+    animation: ciPulse 2.4s ease-in-out infinite;
+}
+
+.ci-floating {
+    animation: ciFloat 6s ease-in-out infinite;
+}
+
+.ci-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.ci-shine::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: 0;
+    width: 42%;
+    height: 160%;
+    background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.34),
+            transparent
+    );
+    animation: ciShine 3.8s ease-in-out infinite;
+}
+
+.ci-scan-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.ci-scan-card::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 120px;
+    background: linear-gradient(
+            180deg,
+            transparent,
+            rgba(141, 216, 255, 0.16),
+            transparent
+    );
+    animation: ciScanLine 4.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.ci-hover-lift {
+    transition: transform var(--ci-transition), box-shadow var(--ci-transition);
+}
+
+.ci-hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--ci-shadow-md);
+}
+
+.ci-animated-gradient {
+    background-size: 220% 220%;
+    animation: ciGradientMove 8s ease infinite;
+}
+
+@keyframes ciRadarSweep {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ciBlink {
+    0%, 100% {
+        opacity: 0.35;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes ciLineMove {
+    0% {
+        transform: translateX(-40%);
+    }
+    100% {
+        transform: translateX(40%);
+    }
+}
+
+.ci-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.ci-shine::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: 0;
+    width: 42%;
+    height: 160%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.34), transparent);
+    animation: ciShine 3.8s ease-in-out infinite;
+}
+
+.ci-scan-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.ci-scan-card::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 120px;
+    background: linear-gradient(180deg, transparent, rgba(141, 216, 255, 0.16), transparent);
+    animation: ciScanLine 4.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.ci-animated-gradient {
+    background-size: 220% 220%;
+    animation: ciGradientMove 8s ease infinite;
+}
