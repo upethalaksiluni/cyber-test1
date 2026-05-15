@@ -105,9 +105,9 @@ function Home() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.75, ease: "easeOut" }}
                         >
-                            <AnimatedBadge icon={BadgeDollarSign} dark>
-                                Investor Relations — Cyber-Intel Online
-                            </AnimatedBadge>
+                            {/*<AnimatedBadge icon={BadgeDollarSign} dark>*/}
+                            {/*    <>Investor Relations</> — Cyber-Intel Online*/}
+                            {/*</AnimatedBadge>*/}
 
                             <div className="ci-home-title-brand">
                                 <img src="/assets/images/logo-1.png" alt="Cyber-Intel Online" />
