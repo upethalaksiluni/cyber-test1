@@ -628,3 +628,138 @@
         padding: 16px;
     }
 }
+
+@media (max-width: 991px) {
+    .ci-footer {
+        text-align: center;
+    }
+
+    .ci-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .ci-footer-grid > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ci-footer-brand {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ci-footer-brand > div:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ci-footer-brand strong,
+    .ci-footer-brand span,
+    .ci-footer h4,
+    .ci-footer-text,
+    .ci-footer p,
+    .ci-footer a,
+    .ci-footer-contact span,
+    .ci-footer-contact strong {
+        text-align: center;
+    }
+
+    .ci-footer-text {
+        max-width: 100%;
+        margin-inline: auto;
+    }
+
+    .ci-socials {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .ci-footer-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .ci-footer-links a {
+        justify-content: center;
+    }
+
+    .ci-footer-contact {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .ci-footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        text-align: center;
+    }
+
+    .ci-footer-bottom p {
+        margin: 0;
+        text-align: center;
+    }
+
+    .ci-footer-bottom div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .ci-scroll-top {
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .ci-footer {
+        text-align: center;
+    }
+
+    .ci-footer-grid {
+        gap: 32px;
+    }
+
+    .ci-footer-brand {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .ci-footer h4 {
+        margin-bottom: 14px;
+    }
+
+    .ci-footer-links {
+        gap: 10px;
+    }
+
+    .ci-footer-contact {
+        gap: 10px;
+    }
+
+    .ci-footer-bottom {
+        gap: 12px;
+    }
+
+    .ci-footer-bottom div {
+        gap: 14px;
+    }
+}

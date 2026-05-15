@@ -11,8 +11,15 @@ function Navbar() {
         <header className="ci-navbar">
             <div className="ci-container ci-navbar-inner">
                 <NavLink to="/" className="ci-brand" onClick={() => setOpen(false)}>
-                    <div className="ci-brand-mark">CI</div>
-                    <div>
+                    <div className="ci-brand-logo-wrap">
+                        <img
+                            src="/assets/images/logo-1.png"
+                            alt="Cyber-Intel Online"
+                            className="ci-brand-logo"
+                        />
+                    </div>
+
+                    <div className="ci-brand-copy">
                         <span className="ci-brand-title">{siteConfig.name}</span>
                         <span className="ci-brand-subtitle">{siteConfig.tagline}</span>
                     </div>
@@ -47,7 +54,13 @@ function Navbar() {
                     ))}
                 </nav>
 
-                <button className="ci-menu-btn" type="button" onClick={() => setOpen(!open)} aria-label="Toggle navigation">
+                <button
+                    className="ci-menu-btn"
+                    type="button"
+                    onClick={() => setOpen((value) => !value)}
+                    aria-label="Toggle navigation"
+                    aria-expanded={open}
+                >
                     {open ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </div>

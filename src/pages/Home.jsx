@@ -86,7 +86,7 @@ function Home() {
     return (
         <>
             <Helmet>
-                <title>Investor Relations — Cyber-Intel Online</title>
+                <title>Cyber-Intel Online</title>
                 <meta
                     name="description"
                     content="Cyber-Intel Online Investor Relations. Building the future of cyber security and intelligence."
@@ -108,6 +108,14 @@ function Home() {
                             <AnimatedBadge icon={BadgeDollarSign} dark>
                                 Investor Relations — Cyber-Intel Online
                             </AnimatedBadge>
+
+                            <div className="ci-home-title-brand">
+                                <img src="/assets/images/logo-1.png" alt="Cyber-Intel Online" />
+                                <div>
+                                    <span>Cyber-Intel Online</span>
+                                    <small>Investor Relations</small>
+                                </div>
+                            </div>
 
                             <h1 className="ci-heading-xl">
                                 Building the Future of <span className="ci-gradient-text">Cyber Security & Intelligence</span>
@@ -141,7 +149,7 @@ function Home() {
                         >
                             <div className="ci-investor-ring">
                                 <div className="ci-radar-sweep" />
-                                <LineChart size={72} />
+                                <img src="/assets/images/logo-1.png" alt="Cyber-Intel Online" className="ci-investor-ring-logo" />
                             </div>
 
                             <div className="ci-investor-metrics">
