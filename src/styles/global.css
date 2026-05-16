@@ -2957,7 +2957,8 @@ body {
     }
 }
 
-.ci-industries-hero {
+.ci-industries-hero,
+.ci-insights-hero {
     min-height: calc(92vh - 84px);
     background:
             radial-gradient(900px 440px at 16% 8%, rgba(37, 99, 235, 0.46), transparent 58%),
@@ -2982,7 +2983,8 @@ body {
     gap: 26px;
 }
 
-.ci-industry-sector-card {
+.ci-industry-sector-card,
+.ci-insights-article {
     position: relative;
     overflow: hidden;
     padding: 34px;
@@ -2995,21 +2997,8 @@ body {
     box-shadow: var(--ci-shadow-md);
 }
 
-.ci-industry-sector-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), transparent 42%);
-    opacity: 0;
-    transition: opacity var(--ci-transition);
-    pointer-events: none;
-}
-
-.ci-industry-sector-card:hover::before {
-    opacity: 1;
-}
-
-.ci-industry-sector-head {
+.ci-industry-sector-head,
+.ci-insights-article-head {
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -3017,7 +3006,8 @@ body {
     margin-bottom: 24px;
 }
 
-.ci-industry-sector-head h3 {
+.ci-industry-sector-head h3,
+.ci-insights-article-head h2 {
     color: var(--ci-navy-900);
     font-size: clamp(1.8rem, 3vw, 2.8rem);
     line-height: 1.02;
@@ -3026,58 +3016,24 @@ body {
     margin: 14px 0 0;
 }
 
-.ci-industry-sector-body {
+.ci-industry-sector-body,
+.ci-insights-article-body {
     position: relative;
     display: grid;
     gap: 16px;
 }
 
-.ci-industry-sector-body p {
+.ci-industry-sector-body p,
+.ci-insights-article-body p {
     color: #536780;
     font-size: 1rem;
     line-height: 1.86;
     margin: 0;
 }
 
-.ci-industries-insight-panel {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 28px;
-    padding: 38px;
-    border-radius: var(--ci-radius-xl);
-    background:
-            radial-gradient(580px 260px at 8% 0%, rgba(37, 99, 235, 0.16), transparent 58%),
-            linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(248, 251, 255, 0.92));
-    border: 1px solid rgba(37, 99, 235, 0.14);
-    box-shadow: var(--ci-shadow-md);
-}
-
-.ci-industries-insight-icon {
-    width: 92px;
-    height: 92px;
-    display: grid;
-    place-items: center;
-    border-radius: 28px;
-    color: var(--ci-white);
-    background: linear-gradient(135deg, var(--ci-blue-600), var(--ci-blue-300));
-    box-shadow: var(--ci-glow-blue);
-}
-
-.ci-industries-insight-content {
-    display: grid;
-    gap: 16px;
-}
-
-.ci-industries-insight-content p {
-    color: #536780;
-    line-height: 1.86;
-    margin: 0;
-}
-
 @media (max-width: 991px) {
-    .ci-industries-hero {
+    .ci-industries-hero,
+    .ci-insights-hero {
         min-height: auto;
     }
 
@@ -3085,46 +3041,34 @@ body {
         min-height: auto;
     }
 
-    .ci-industry-sector-card {
+    .ci-industry-sector-card,
+    .ci-insights-article {
         padding: 26px;
         text-align: center;
     }
 
-    .ci-industry-sector-head {
+    .ci-industry-sector-head,
+    .ci-insights-article-head {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .ci-industry-sector-body p {
-        text-align: center;
-    }
-
-    .ci-industries-insight-panel {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
-    }
-
-    .ci-industries-insight-content p {
+    .ci-industry-sector-body p,
+    .ci-insights-article-body p {
         text-align: center;
     }
 }
 
 @media (max-width: 575px) {
     .ci-industry-sector-card,
-    .ci-industries-insight-panel {
+    .ci-insights-article {
         padding: 20px;
         border-radius: 22px;
     }
 
-    .ci-industry-sector-head h3 {
+    .ci-industry-sector-head h3,
+    .ci-insights-article-head h2 {
         font-size: 1.65rem;
-    }
-
-    .ci-industries-insight-icon {
-        width: 76px;
-        height: 76px;
-        border-radius: 22px;
     }
 }

@@ -2,112 +2,17 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import {
     ArrowRight,
-    Building2,
     CheckCircle2,
-    Factory,
-    FileText,
     Globe2,
-    Landmark,
     LockKeyhole,
     Network,
     Radar,
     Scale,
     ShieldCheck,
-    Target,
-    UsersRound
+    Target
 } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const sectors = [
-    {
-        icon: Landmark,
-        title: "Government Non-Federal Sector",
-        tag: "Provincial · Municipal · Public Agencies",
-        text: [
-            "Cyber-Intel Online (Pvt) Ltd delivers specialized cybersecurity, information security, digital resilience, and advanced IT/ICT solutions tailored for Government – Non-Federal institutions, including provincial councils, local authorities, public sector agencies, municipalities, educational institutions, healthcare authorities, regulatory bodies, and state-owned enterprises. Our service offerings are designed to help government organizations strengthen cyber resilience, protect critical digital infrastructure, and maintain operational continuity in an increasingly complex and evolving threat landscape.",
-            "With the growing reliance on digital platforms, cloud services, and interconnected government systems, public sector organizations face heightened risks from ransomware attacks, cyber espionage, phishing campaigns, insider threats, and data breaches. Cyber-Intel Online provides comprehensive government-focused cybersecurity services that support proactive risk management, regulatory compliance, and secure digital transformation initiatives. Our solutions align with internationally recognized frameworks and standards, including NIST, ISO/IEC security standards, FISMA-aligned controls, and globally accepted governance and compliance best practices.",
-            "Our Government – Non-Federal service portfolio includes advanced vulnerability assessments and penetration testing (VA/PT), cyber threat intelligence, red teaming, blue teaming, purple teaming, adversary simulation, digital forensics, cybercrime investigation support, incident response, secure infrastructure engineering, and cloud security services. These capabilities enable public sector entities to identify vulnerabilities, assess cyber readiness, detect malicious activities, and rapidly respond to security incidents while safeguarding sensitive citizen and organizational data.",
-            "Cyber-Intel Online also supports government agencies through secure software development, DevSecOps implementation, disaster recovery planning, business continuity management, and cybersecurity awareness training programs. Our multidisciplinary team works closely with public sector stakeholders to develop resilient, scalable, and compliance-driven security architectures that support both current operational requirements and long-term digital modernization strategies.",
-            "As a vendor-neutral and independent cybersecurity partner, Cyber-Intel Online delivers unbiased advisory and engineering services focused solely on the best interests of government clients. Our secure and scalable operational model enables us to support local, regional, and international government engagements while preserving confidentiality, data sovereignty, and mission-critical resilience.",
-            "Through a combination of technical expertise, governance-focused methodologies, and continuous innovation, Cyber-Intel Online empowers Government – Non-Federal organizations to strengthen cybersecurity defenses, improve operational resilience, enhance public trust, and protect critical public services against emerging cyber threats."
-        ]
-    },
-    {
-        icon: ShieldCheck,
-        title: "Government Federal Sector",
-        tag: "Federal · Defense · National Public Entities",
-        text: [
-            "Cyber-Intel Online (Pvt) Ltd provides advanced cybersecurity, information security, cyber defense, and digital resilience solutions tailored for Government – Federal institutions, including federal ministries, national defense organizations, intelligence agencies, law enforcement authorities, regulatory commissions, critical infrastructure operators, and national-level public sector entities. Our specialized service offerings are designed to support secure governance, protect national digital assets, and strengthen cyber resilience against increasingly sophisticated cyber threats targeting government environments.",
-            "As federal agencies continue to modernize through digital transformation, cloud adoption, interconnected infrastructure, and data-driven governance, the risk landscape has expanded significantly. Nation-state attacks, advanced persistent threats (APTs), cyber espionage, ransomware campaigns, insider threats, and supply chain attacks require a strategic and intelligence-driven cybersecurity approach. Cyber-Intel Online delivers comprehensive cyber defense capabilities aligned with internationally recognized frameworks and standards, including NIST, FISMA, FIPS, ISO/IEC information security standards, and globally accepted governance, risk, and compliance best practices.",
-            "Our Government – Federal cybersecurity services include vulnerability assessment and penetration testing (VA/PT), red teaming, blue teaming, purple teaming, adversary simulation, cyber threat intelligence, digital forensics, cybercrime investigation support, lawful interception advisory, incident response operations, secure cloud architecture, and mission-critical infrastructure protection. These services are designed to help federal organizations identify vulnerabilities, assess operational readiness, enhance situational awareness, and defend against complex cyberattacks targeting classified, regulated, and mission-critical systems.",
-            "Cyber-Intel Online also supports federal institutions with secure software engineering, DevSecOps integration, disaster recovery planning, business continuity management, cybersecurity governance, compliance consulting, and executive-level security awareness programs. Our multidisciplinary team of cybersecurity engineers, researchers, consultants, and technology specialists works closely with government stakeholders to develop resilient, scalable, and intelligence-driven security frameworks that support national operational priorities and long-term digital security strategies.",
-            "Operating under a vendor-neutral and independent advisory model, Cyber-Intel Online ensures that all cybersecurity recommendations and engineering solutions are delivered exclusively in the best interests of federal clients. Our secure, scalable, and globally capable operational model supports sensitive government engagements while preserving confidentiality, operational integrity, data sovereignty, and regulatory compliance.",
-            "Through continuous innovation, technical excellence, and standards-driven cybersecurity operations, Cyber-Intel Online empowers Government – Federal organizations to strengthen cyber defense capabilities, improve national cyber resilience, secure critical government infrastructure, and maintain public trust in an increasingly complex global threat environment."
-        ]
-    },
-    {
-        icon: Building2,
-        title: "Private and Corporate Sector",
-        tag: "Banking · Healthcare · Technology · Legal",
-        text: [
-            "Cyber-Intel Online (Pvt) Ltd delivers advanced cybersecurity, information security, digital forensics, and IT/ICT solutions tailored for the Private Sector, helping organizations protect critical business assets, maintain operational continuity, and strengthen resilience against evolving cyber threats. Our services support enterprises across multiple industries, including banking and finance, telecommunications, healthcare, manufacturing, retail, logistics, technology, education, legal, hospitality, and multinational corporate environments.",
-            "In today’s highly connected digital economy, private sector organizations face increasing risks from ransomware attacks, phishing campaigns, insider threats, data breaches, business email compromise (BEC), malware intrusions, and advanced persistent threats (APTs). Cyber-Intel Online provides comprehensive cybersecurity services designed to help businesses proactively identify vulnerabilities, reduce cyber risk exposure, secure sensitive data, and comply with industry and regulatory requirements. Our standards-driven approach aligns with internationally recognized frameworks, including NIST, ISO/IEC information security standards, FISMA-aligned controls, and globally accepted governance, risk, and compliance methodologies.",
-            "Our Private Sector service offerings include vulnerability assessment and penetration testing (VA/PT), red teaming, blue teaming, purple teaming, cyber threat intelligence, adversary simulation, digital forensics, incident response, cybercrime investigation support, cloud security, DevSecOps implementation, and secure infrastructure engineering. These services enable organizations to evaluate their security posture, identify exploitable weaknesses, strengthen detection and response capabilities, and defend against sophisticated cyberattacks targeting modern enterprise environments.",
-            "Cyber-Intel Online also provides secure software development, web and mobile application security, disaster recovery planning, business continuity management, cybersecurity awareness training, and governance advisory services to support long-term organizational resilience and digital transformation initiatives. Our multidisciplinary team works closely with business leaders, IT departments, and security teams to develop scalable and cost-effective cybersecurity strategies aligned with operational and business objectives.",
-            "As a vendor-neutral and independent cybersecurity partner, Cyber-Intel Online delivers unbiased consulting, engineering, and advisory services focused entirely on the best interests of clients. Our secure and globally capable operational model supports local and international private sector engagements while maintaining confidentiality, compliance, and business-critical continuity.",
-            "By combining technical expertise, proactive threat management, and internationally aligned security practices, Cyber-Intel Online empowers private sector organizations to strengthen cyber resilience, protect digital infrastructure, safeguard customer trust, and operate confidently in an increasingly complex and rapidly evolving cyber threat landscape."
-        ]
-    },
-    {
-        icon: Factory,
-        title: "Enterprise Business Sector",
-        tag: "Enterprise · Multinational · Mission-Critical",
-        text: [
-            "Cyber-Intel Online (Pvt) Ltd delivers enterprise-grade cybersecurity, information security, and advanced digital resilience solutions designed specifically for the Enterprise Business Sector. Our comprehensive service offerings support large-scale organizations, multinational corporations, enterprise technology environments, and mission-critical business operations that require high levels of security, compliance, scalability, and operational continuity.",
-            "As enterprise organizations continue to expand their digital ecosystems through cloud computing, remote work infrastructure, enterprise applications, IoT integration, and data-driven operations, they face increasingly sophisticated cyber threats. Ransomware attacks, advanced persistent threats (APTs), insider threats, supply chain compromises, phishing campaigns, and large-scale data breaches can significantly impact business operations, financial stability, and brand reputation. Cyber-Intel Online provides proactive and intelligence-driven cybersecurity solutions that help enterprises identify vulnerabilities, mitigate risks, strengthen cyber resilience, and maintain secure digital transformation initiatives.",
-            "Our Enterprise Business cybersecurity services include vulnerability assessment and penetration testing (VA/PT), red teaming, blue teaming, purple teaming, adversary simulation, cyber threat intelligence, incident response, digital forensics, secure cloud architecture, DevSecOps implementation, and enterprise infrastructure security engineering. These services are designed to evaluate and strengthen enterprise security posture across networks, applications, cloud platforms, endpoints, and critical business systems.",
-            "Cyber-Intel Online also supports enterprise organizations with cybersecurity governance, compliance consulting, business continuity management, disaster recovery planning, secure software development, web and mobile application security, and executive cybersecurity awareness programs. Our multidisciplinary team works closely with enterprise leadership, IT departments, security operations centers (SOC), and compliance teams to develop scalable and resilient cybersecurity strategies aligned with business objectives and international security standards.",
-            "Our standards-driven approach aligns with globally recognized cybersecurity and governance frameworks, including NIST, ISO/IEC information security standards, FIPS, FISMA-aligned controls, and industry best practices in governance, risk management, and compliance (GRC). This enables enterprise businesses to meet regulatory obligations, support audit readiness, and maintain operational integrity across complex and highly regulated environments.",
-            "As a vendor-neutral and independent cybersecurity partner, Cyber-Intel Online delivers unbiased advisory, consulting, and engineering services focused entirely on the long-term security and operational success of enterprise clients. Through secure global delivery capabilities, advanced technical expertise, and continuous innovation, we help enterprise organizations protect critical digital assets, improve cyber defense capabilities, enhance stakeholder confidence, and maintain resilience against rapidly evolving cyber threats."
-        ]
-    },
-    {
-        icon: LockKeyhole,
-        title: "Military and Defense Sectors",
-        tag: "Defense · Mission-Critical · National Security",
-        text: [
-            "Cyber-Intel Online (Pvt) Ltd delivers advanced cybersecurity, cyber defense, digital resilience, and mission-critical IT/ICT solutions tailored for the Military and Defense Sectors. Our specialized service offerings are designed to support armed forces, defense establishments, intelligence communities, strategic command units, defense contractors, and national security agencies operating within highly sensitive, regulated, and mission-critical environments.",
-            "Modern military and defense operations increasingly depend on interconnected digital infrastructure, secure communications, intelligence systems, cloud technologies, and cyber-enabled operational capabilities. As cyber warfare, nation-state attacks, advanced persistent threats (APTs), electronic espionage, ransomware campaigns, and critical infrastructure attacks continue to evolve, defense organizations require highly resilient and intelligence-driven cybersecurity strategies. Cyber-Intel Online provides proactive cyber defense solutions designed to strengthen operational readiness, protect classified systems, secure defense communications, and maintain mission continuity in complex threat environments.",
-            "Our Military and Defense cybersecurity services include vulnerability assessment and penetration testing (VA/PT), adversary simulation, cyber threat intelligence, red teaming, blue teaming, purple teaming, incident response operations, digital forensics, cybercrime investigation support, secure infrastructure engineering, cloud security, and mission-critical security architecture development. These capabilities are designed to identify vulnerabilities, simulate real-world attack scenarios, evaluate operational resilience, and improve defensive readiness against sophisticated cyber threats targeting military and defense networks.",
-            "Cyber-Intel Online also supports defense-sector organizations with cybersecurity governance, secure software engineering, DevSecOps implementation, lawful interception advisory, disaster recovery planning, business continuity management, and advanced cybersecurity training programs. Our multidisciplinary team of cybersecurity engineers, consultants, researchers, and technologists collaborates closely with military and defense stakeholders to develop scalable, secure, and operationally resilient cyber defense frameworks aligned with strategic national security objectives.",
-            "Our operational and governance methodologies align with internationally recognized cybersecurity and information assurance frameworks, including NIST, FIPS, FISMA-aligned controls, ISO/IEC information security standards, and globally accepted best practices in governance, risk management, and compliance. This standards-driven approach enables military and defense organizations to maintain secure operations, strengthen cyber resilience, support regulatory compliance, and protect critical national security assets.",
-            "As a vendor-neutral and independent cybersecurity partner, Cyber-Intel Online delivers unbiased advisory, consulting, and engineering services focused entirely on the operational security and strategic interests of defense-sector clients. Through secure global delivery capabilities, advanced technical expertise, and continuous innovation, we help military and defense organizations strengthen cyber defense capabilities, improve situational awareness, protect mission-critical infrastructure, and maintain operational superiority in an increasingly contested digital battlespace."
-        ]
-    },
-    {
-        icon: Radar,
-        title: "State Intelligence Sector",
-        tag: "Intelligence · Counterintelligence · Secure Operations",
-        text: [
-            "Cyber-Intel Online (Pvt) Ltd provides advanced cybersecurity, cyber intelligence, digital resilience, and mission-critical information assurance solutions tailored for the State Intelligence Sector. Our specialized service offerings support intelligence agencies, national security organizations, strategic intelligence units, counterintelligence operations, and sensitive government entities responsible for protecting national interests, critical intelligence assets, and secure communications infrastructures.",
-            "In an era of rapidly evolving cyber warfare, electronic espionage, advanced persistent threats (APTs), insider threats, disinformation campaigns, and state-sponsored cyber operations, intelligence organizations require highly secure, adaptive, and intelligence-driven cybersecurity capabilities. Cyber-Intel Online delivers proactive cyber defense and intelligence-focused security solutions designed to strengthen operational resilience, protect classified information systems, and support secure intelligence operations across complex and high-risk environments.",
-            "Our State Intelligence Sector service offerings include cyber threat intelligence, adversary simulation, red teaming, blue teaming, purple teaming, vulnerability assessment and penetration testing (VA/PT), digital forensics, incident response operations, cybercrime investigation support, lawful interception advisory, secure infrastructure engineering, cloud security, and mission-critical security architecture development. These capabilities help intelligence organizations identify vulnerabilities, assess defensive readiness, monitor emerging threats, and defend against sophisticated cyberattacks targeting national intelligence infrastructure.",
-            "Cyber-Intel Online also supports intelligence-sector operations through secure software engineering, DevSecOps implementation, cybersecurity governance, disaster recovery planning, business continuity management, and advanced operational cybersecurity training programs. Our multidisciplinary team of cybersecurity engineers, consultants, researchers, and technologists works closely with intelligence stakeholders to develop scalable, resilient, and strategically aligned cyber defense frameworks capable of supporting sensitive and classified operational environments.",
-            "Our operational methodologies and service delivery models align with internationally recognized cybersecurity and information assurance frameworks, including NIST, FIPS, FISMA-aligned controls, ISO/IEC information security standards, and globally accepted governance, risk, and compliance practices. This standards-driven approach enables intelligence organizations to maintain secure operations, strengthen national cyber resilience, support regulatory and operational requirements, and safeguard sensitive intelligence assets from emerging digital threats.",
-            "As a vendor-neutral and independent cybersecurity partner, Cyber-Intel Online delivers unbiased advisory, consulting, and engineering services focused entirely on the operational integrity and strategic security objectives of state intelligence clients. Through secure global delivery capabilities, advanced technical expertise, and continuous innovation, we help intelligence organizations improve cyber defense readiness, enhance situational awareness, protect critical intelligence systems, and maintain operational superiority in an increasingly sophisticated cyber threat environment."
-        ]
-    }
-];
-
-const insightParagraphs = [
-    "In today’s hyperconnected digital economy, cybersecurity has evolved from a technical support function into a critical business and national security priority. Organizations across government, defense, intelligence, enterprise, and private sectors are increasingly targeted by sophisticated cyber threats, including ransomware attacks, advanced persistent threats (APTs), phishing campaigns, insider threats, supply chain compromises, and data breaches. As digital transformation accelerates globally, the need for proactive cyber resilience, regulatory compliance, and secure operational continuity has become essential for organizations of all sizes and industries.",
-    "Modern cyber threats are no longer limited to isolated attacks against IT systems. Threat actors now target operational technology (OT), cloud infrastructure, remote work environments, financial systems, healthcare networks, critical infrastructure, and sensitive government platforms. This evolving threat landscape has significantly increased the demand for advanced cybersecurity services such as vulnerability assessment and penetration testing (VA/PT), cyber threat intelligence, adversary simulation, red teaming, blue teaming, purple teaming, digital forensics, incident response, and secure cloud architecture engineering. Organizations increasingly recognize that traditional perimeter-based security models alone are insufficient against modern cyber warfare and intelligence-driven attacks.",
-    "Cyber-Intel Online (Pvt) Ltd operates at the intersection of cybersecurity, information assurance, digital resilience, and advanced technology services, delivering comprehensive security solutions aligned with internationally recognized standards and frameworks, including NIST, FIPS, FISMA, and ISO/IEC information security standards. This standards-driven approach enables organizations to strengthen governance, improve operational resilience, support compliance initiatives, and maintain trust in increasingly regulated and digitally dependent environments.",
-    "Businesses and public-sector institutions are increasingly investing in intelligence-driven cybersecurity strategies that prioritize continuous monitoring, proactive threat detection, rapid incident response, and operational resilience. The rise of artificial intelligence, cloud computing, remote workforce infrastructure, Internet of Things (IoT) technologies, and digital service platforms has expanded the attack surface for cybercriminals and nation-state actors alike. As a result, organizations require integrated cybersecurity ecosystems capable of identifying emerging threats, minimizing operational disruption, protecting sensitive information, and supporting long-term digital sustainability.",
-    "Digital forensics and cybercrime investigation services have also become essential components of modern organizational security strategies. Following a security incident, organizations require accurate evidence preservation, forensic analysis, incident reconstruction, and legal-grade reporting to support investigations, litigation readiness, regulatory reporting, and operational recovery. Cyber-Intel Online provides advanced digital forensic and cyber investigation capabilities that assist organizations in identifying the source, scope, and impact of cyber incidents while supporting secure recovery and future risk mitigation initiatives.",
-    "Cybersecurity governance, risk management, and compliance (GRC) have become increasingly important across both public and private sectors. Regulatory expectations, privacy obligations, and international compliance standards continue to evolve rapidly, requiring organizations to adopt structured cybersecurity governance frameworks, secure operational processes, and ongoing risk management strategies. Cyber-Intel Online supports organizations through compliance-focused cybersecurity consulting, governance advisory, secure infrastructure engineering, and resilience-driven operational strategies tailored to complex and mission-critical environments.",
-    "As cyber threats continue to evolve in sophistication and scale, organizations must adopt a proactive, intelligence-led, and continuously adaptive security posture. Cyber-Intel Online remains committed to delivering vendor-neutral, ethically driven, and technically advanced cybersecurity solutions that help organizations strengthen cyber resilience, protect critical digital assets, enhance operational continuity, and maintain stakeholder confidence in an increasingly complex global threat environment."
-];
+import { sectors } from "../data/sectorContent";
 
 const capabilities = [
     "VA/PT and adversary simulation",
@@ -128,7 +33,7 @@ function Industries() {
                 <title>Industries — Cyber-Intel Online</title>
                 <meta
                     name="description"
-                    content="Cyber-Intel Online industry sectors including government, federal, private, enterprise, military, defense, state intelligence, and cybersecurity insights."
+                    content="Cyber-Intel Online industry sectors including government, federal, private, enterprise, military, defense, and state intelligence cybersecurity sectors."
                 />
             </Helmet>
 
@@ -295,36 +200,6 @@ function Industries() {
                     </div>
                 </section>
 
-                <section className="ci-section">
-                    <div className="ci-container">
-                        <div className="ci-section-header text-center">
-                            <span className="ci-mini-title">Insights</span>
-                            <h2 className="ci-heading-lg">Cybersecurity Industry Insights and Strategic Business Intelligence</h2>
-                            <p>
-                                Strategic context for organizations operating in complex public, private, defense, intelligence, and enterprise digital environments.
-                            </p>
-                        </div>
-
-                        <motion.div
-                            className="ci-industries-insight-panel ci-mt-32"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.2 }}
-                            transition={{ duration: 0.7 }}
-                        >
-                            <div className="ci-industries-insight-icon">
-                                <FileText size={42} />
-                            </div>
-
-                            <div className="ci-industries-insight-content">
-                                {insightParagraphs.map((paragraph) => (
-                                    <p key={paragraph}>{paragraph}</p>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </div>
-                </section>
-
                 <section className="ci-section-sm">
                     <div className="ci-container">
                         <motion.div
@@ -346,8 +221,8 @@ function Industries() {
                                 <Link to="/contact" className="ci-btn ci-btn-light">
                                     Contact Team <ArrowRight size={18} />
                                 </Link>
-                                <Link to="/services" className="ci-btn ci-btn-outline">
-                                    View Services
+                                <Link to="/insights" className="ci-btn ci-btn-outline">
+                                    View Insights
                                 </Link>
                             </div>
                         </motion.div>
