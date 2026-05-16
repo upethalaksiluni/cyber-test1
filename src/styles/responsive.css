@@ -909,3 +909,303 @@
         padding: 16px;
     }
 }
+
+@media (max-width: 991px) {
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .ci-hero-grid,
+    .ci-overview-grid,
+    .ci-framework-grid,
+    .ci-framework-detail-grid,
+    .ci-framework-request-grid,
+    .ci-contact-grid,
+    .ci-services-match-grid {
+        gap: 28px;
+    }
+
+    .ci-heading-xl br,
+    .ci-heading-lg br {
+        display: none;
+    }
+
+    .ci-lead {
+        max-width: 62ch;
+    }
+
+    .ci-command-panel,
+    .ci-services-command,
+    .ci-about-command,
+    .ci-careers-panel,
+    .ci-contact-hero-panel,
+    .ci-investor-panel {
+        padding: 22px;
+    }
+
+    .ci-command-list div,
+    .ci-market-panel div,
+    .ci-contact-info-item,
+    .ci-check-list div {
+        border-radius: 16px;
+    }
+
+    .ci-framework-card-link ul {
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .ci-framework-map-row {
+        border-radius: 18px;
+    }
+
+    .ci-framework-map-row + .ci-framework-map-row {
+        margin-top: 12px;
+    }
+
+    .ci-hero-actions .ci-btn {
+        width: 100%;
+    }
+
+    .ci-home-title-brand {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ci-home-title-brand div {
+        align-items: center;
+    }
+
+    .ci-trust-item,
+    .ci-revenue-item,
+    .ci-growth-roadmap div {
+        padding: 22px;
+    }
+
+    .ci-footer-links a,
+    .ci-contact-socials a {
+        min-height: 42px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .ci-heading-xl {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .ci-heading-lg {
+        font-size: clamp(1.7rem, 8vw, 2.5rem);
+    }
+
+    .ci-lead {
+        font-size: 0.98rem;
+        line-height: 1.8;
+    }
+
+    .ci-hero-actions {
+        gap: 10px;
+    }
+
+    .ci-hero-badges {
+        gap: 8px;
+    }
+
+    .ci-card,
+    .ci-framework-card-link,
+    .ci-framework-detail-panel,
+    .ci-framework-deliverables,
+    .ci-framework-form-card,
+    .ci-framework-side-panel,
+    .ci-contact-form-card,
+    .ci-contact-info-panel,
+    .ci-coming-soon-card,
+    .ci-contact-panel,
+    .ci-market-panel,
+    .ci-security-panel,
+    .ci-investor-panel,
+    .ci-about-command,
+    .ci-careers-panel,
+    .ci-contact-hero-panel,
+    .ci-industry-sector-card,
+    .ci-insights-article,
+    .ci-service-main-card {
+        border-radius: 20px;
+    }
+
+    .ci-framework-map {
+        border-radius: 20px;
+    }
+
+    .ci-framework-map-row {
+        padding: 16px;
+    }
+
+    .ci-footer-bottom {
+        padding-top: 18px;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .ci-heading-xl {
+        font-size: clamp(1.9rem, 10vw, 2.6rem);
+        line-height: 1.08;
+    }
+
+    .ci-heading-lg {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+        line-height: 1.12;
+    }
+
+    .ci-lead {
+        font-size: 0.93rem;
+        line-height: 1.72;
+    }
+
+    .ci-btn {
+        font-size: 14px;
+    }
+
+    .ci-hero-badges span,
+    .ci-tag,
+    .ci-framework-tags span,
+    .ci-service-chips span {
+        font-size: 11px;
+    }
+
+    .ci-card,
+    .ci-framework-card-link,
+    .ci-framework-detail-panel,
+    .ci-framework-deliverables,
+    .ci-framework-form-card,
+    .ci-framework-side-panel,
+    .ci-contact-form-card,
+    .ci-contact-info-panel,
+    .ci-coming-soon-card,
+    .ci-contact-panel,
+    .ci-market-panel,
+    .ci-security-panel,
+    .ci-investor-panel,
+    .ci-about-command,
+    .ci-careers-panel,
+    .ci-contact-hero-panel,
+    .ci-industry-sector-card,
+    .ci-insights-article,
+    .ci-service-main-card {
+        padding: 16px;
+    }
+
+    .ci-navbar {
+        backdrop-filter: blur(14px);
+    }
+
+    .ci-nav-links {
+        backdrop-filter: blur(22px);
+    }
+
+    .ci-footer {
+        padding-bottom: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .ci-heading-xl {
+        font-size: 1.75rem;
+    }
+
+    .ci-heading-lg {
+        font-size: 1.5rem;
+    }
+
+    .ci-btn {
+        min-height: 44px;
+        padding: 10px 14px;
+    }
+
+    .ci-brand-title {
+        max-width: 100px;
+    }
+
+    .ci-brand-subtitle {
+        max-width: 100px;
+    }
+
+    .ci-nav-link,
+    .ci-nav-cta {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .ci-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ci-hero-content,
+    .ci-hero .ci-hero-grid > div:first-child {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    body.ci-nav-open {
+        overflow: hidden;
+    }
+
+    .ci-hero-content,
+    .ci-hero .ci-hero-grid > div:first-child,
+    .ci-frameworks-hero-inner > div {
+        padding: 26px;
+        text-align: center;
+    }
+
+    .ci-hero .ci-lead,
+    .ci-services-hero .ci-lead,
+    .ci-about-hero .ci-lead,
+    .ci-careers-hero .ci-lead,
+    .ci-contact-hero .ci-lead,
+    .ci-frameworks-hero .ci-lead,
+    .ci-framework-detail-hero .ci-lead,
+    .ci-investor-hero .ci-lead,
+    .ci-home-hero .ci-lead,
+    .ci-industries-hero .ci-lead,
+    .ci-insights-hero .ci-lead {
+        max-width: 100%;
+    }
+
+    .ci-page-toc {
+        top: calc(var(--ci-navbar-height) + 10px);
+        margin-inline: -4px;
+        border-radius: 18px;
+    }
+}
+
+@media (max-width: 575px) {
+    .ci-hero-content,
+    .ci-hero .ci-hero-grid > div:first-child,
+    .ci-frameworks-hero-inner > div {
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .ci-page-loader-card {
+        width: calc(100% - 32px);
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ci-page-toc {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .ci-page-toc a {
+        min-height: 36px;
+        padding: 0 12px;
+        font-size: 12px;
+    }
+}

@@ -6,8 +6,13 @@ import ScrollToTop from "../common/ScrollToTop";
 function PageLayout() {
     return (
         <>
+            <a href="#main-content" className="ci-skip-link">
+                Skip to content
+            </a>
             <Navbar />
-            <Outlet />
+            <div id="main-content" tabIndex="-1">
+                <Outlet />
+            </div>
             <Footer />
             <ScrollToTop />
         </>

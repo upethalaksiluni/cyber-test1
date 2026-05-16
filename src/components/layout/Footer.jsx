@@ -14,6 +14,8 @@ function Footer() {
                                     src="/assets/images/logo-1.png"
                                     alt="Cyber-Intel Online"
                                     className="ci-footer-logo"
+                                    width="64"
+                                    height="64"
                                 />
                             </div>
 
@@ -27,19 +29,19 @@ function Footer() {
 
                         <div className="ci-socials">
                             <a href={siteConfig.socials.facebook} target="_blank" rel="noreferrer" aria-label="Facebook">
-                                <i className="bi bi-facebook"></i>
+                                <i className="bi bi-facebook" />
                             </a>
 
                             <a href={siteConfig.socials.x} target="_blank" rel="noreferrer" aria-label="X">
-                                <i className="bi bi-twitter-x"></i>
+                                <i className="bi bi-twitter-x" />
                             </a>
 
                             <a href={siteConfig.socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                                <i className="bi bi-linkedin"></i>
+                                <i className="bi bi-linkedin" />
                             </a>
 
                             <a href={siteConfig.socials.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
-                                <i className="bi bi-instagram"></i>
+                                <i className="bi bi-instagram" />
                             </a>
                         </div>
                     </div>
@@ -71,12 +73,12 @@ function Footer() {
                         <h4>Investor Relations</h4>
 
                         <div className="ci-footer-contact">
-                            <ShieldCheck size={20} />
+                            <ShieldCheck size={20} aria-hidden="true" />
                             <span>Strategic investor and partner engagement</span>
                         </div>
 
                         <a className="ci-footer-contact" href="mailto:investor.relations@cyberintel.online">
-                            <Mail size={20} />
+                            <Mail size={20} aria-hidden="true" />
                             <span>investor.relations@cyberintel.online</span>
                         </a>
                     </div>

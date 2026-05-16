@@ -3072,3 +3072,793 @@ body {
         font-size: 1.65rem;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--ci-navbar-height);
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--ci-bg);
+    color: var(--ci-text);
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+section {
+    scroll-margin-top: calc(var(--ci-navbar-height) + 20px);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    transition:
+            color var(--ci-transition-fast),
+            opacity var(--ci-transition-fast),
+            background var(--ci-transition-fast),
+            border-color var(--ci-transition-fast);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(96, 165, 250, 0.85);
+    outline-offset: 3px;
+}
+
+.ci-btn,
+.ci-card,
+.ci-framework-card-link,
+.ci-service-main-card,
+.ci-industry-sector-card,
+.ci-insights-article,
+.ci-framework-choice,
+.ci-nav-link,
+.ci-nav-cta {
+    will-change: transform;
+}
+
+.ci-btn:active,
+.ci-nav-cta:active {
+    transform: scale(0.98);
+}
+
+.ci-heading-xl,
+.ci-heading-lg,
+.ci-framework-detail-panel h2,
+.ci-framework-card-link h3,
+.ci-service-main-card h3,
+.ci-industry-sector-head h3,
+.ci-insights-article-head h2 {
+    text-wrap: balance;
+}
+
+.ci-lead,
+.ci-card p,
+.ci-framework-card-link p,
+.ci-service-main-card p,
+.ci-industry-sector-body p,
+.ci-insights-article-body p {
+    text-wrap: pretty;
+}
+
+.ci-navbar {
+    isolation: isolate;
+}
+
+.ci-nav-links {
+    overscroll-behavior: contain;
+}
+
+.ci-hero,
+.ci-services-hero,
+.ci-about-hero,
+.ci-careers-hero,
+.ci-contact-hero,
+.ci-frameworks-hero,
+.ci-framework-detail-hero,
+.ci-investor-hero,
+.ci-home-hero,
+.ci-industries-hero,
+.ci-insights-hero {
+    background-attachment: scroll !important;
+}
+
+.ci-hero::before,
+.ci-services-hero::before,
+.ci-about-hero::before,
+.ci-careers-hero::before,
+.ci-contact-hero::before,
+.ci-frameworks-hero::before,
+.ci-framework-detail-hero::before,
+.ci-investor-hero::before,
+.ci-home-hero::before {
+    backdrop-filter: blur(2px);
+}
+
+.ci-card,
+.ci-framework-card-link,
+.ci-framework-choice,
+.ci-service-main-card,
+.ci-industry-sector-card,
+.ci-insights-article,
+.ci-contact-form-card,
+.ci-contact-info-panel,
+.ci-framework-detail-panel,
+.ci-framework-deliverables,
+.ci-framework-form-card,
+.ci-framework-side-panel {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.ci-card:hover,
+.ci-framework-card-link:hover,
+.ci-framework-choice:hover,
+.ci-service-main-card:hover,
+.ci-industry-sector-card:hover,
+.ci-insights-article:hover {
+    transform: translate3d(0, -8px, 0);
+}
+
+.ci-btn-primary,
+.ci-nav-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.ci-btn-primary::before,
+.ci-nav-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(
+                    120deg,
+                    transparent,
+                    rgba(255,255,255,0.18),
+                    transparent
+            );
+    transform: translateX(-120%);
+    transition: transform 0.7s ease;
+}
+
+.ci-btn-primary:hover::before,
+.ci-nav-cta:hover::before {
+    transform: translateX(120%);
+}
+
+.ci-footer a,
+.ci-nav-link,
+.ci-card-link {
+    text-underline-offset: 4px;
+}
+
+.ci-footer a:hover,
+.ci-card-link:hover {
+    text-decoration: underline;
+}
+
+.ci-command-panel,
+.ci-services-command,
+.ci-about-command,
+.ci-careers-panel,
+.ci-contact-hero-panel,
+.ci-investor-panel {
+    overflow: hidden;
+}
+
+.ci-framework-map {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ci-framework-map::-webkit-scrollbar {
+    height: 8px;
+}
+
+.ci-framework-map::-webkit-scrollbar-thumb {
+    background: rgba(96, 165, 250, 0.45);
+    border-radius: 999px;
+}
+
+.ci-contact-form input,
+.ci-contact-form textarea,
+.ci-contact-form select {
+    appearance: none;
+}
+
+.ci-field input::placeholder,
+.ci-field textarea::placeholder {
+    color: #94a3b8;
+}
+
+.ci-scroll-top {
+    backdrop-filter: blur(14px);
+}
+
+.ci-scroll-top:hover {
+    transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .ci-scroll-top,
+    .ci-card,
+    .ci-framework-card-link,
+    .ci-framework-choice,
+    .ci-service-main-card,
+    .ci-industry-sector-card,
+    .ci-insights-article,
+    .ci-btn,
+    .ci-nav-cta {
+        transform: none !important;
+    }
+}
+
+.ci-skip-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1000000;
+    transform: translateY(-140%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 18px;
+    border-radius: var(--ci-radius-pill);
+    background: var(--ci-white);
+    color: var(--ci-navy-950);
+    border: 2px solid var(--ci-blue-400);
+    box-shadow: var(--ci-shadow-md);
+    font-weight: 900;
+    transition: transform var(--ci-transition-fast);
+}
+
+.ci-skip-link:focus {
+    transform: translateY(0);
+}
+
+#main-content:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 3px solid var(--ci-cyan-200);
+    outline-offset: 4px;
+}
+
+.ci-navbar :focus-visible,
+.ci-footer :focus-visible,
+.ci-btn:focus-visible,
+.ci-card:focus-visible,
+.ci-service-main-card:focus-visible,
+.ci-framework-card-link:focus-visible {
+    outline: 3px solid var(--ci-cyan-200);
+    outline-offset: 4px;
+}
+
+.ci-page-loader {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background:
+            radial-gradient(900px 520px at 12% 12%, rgba(37, 99, 235, 0.48), transparent 60%),
+            radial-gradient(760px 480px at 88% 18%, rgba(141, 216, 255, 0.24), transparent 58%),
+            linear-gradient(115deg, #020817 0%, #06152f 42%, #0b2b5f 100%);
+    color: var(--ci-white);
+}
+
+.ci-page-loader-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 22px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(187, 251, 255, 0.2);
+    box-shadow: var(--ci-shadow-lg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.ci-page-loader-card span {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    border: 3px solid rgba(255, 255, 255, 0.28);
+    border-top-color: var(--ci-cyan-200);
+    animation: ciRadarSweep 0.8s linear infinite;
+}
+
+.ci-page-loader-card strong {
+    color: var(--ci-white);
+    font-weight: 900;
+}
+
+.ci-hero,
+.ci-services-hero,
+.ci-about-hero,
+.ci-careers-hero,
+.ci-contact-hero,
+.ci-frameworks-hero,
+.ci-framework-detail-hero,
+.ci-investor-hero,
+.ci-home-hero,
+.ci-industries-hero,
+.ci-insights-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+            radial-gradient(900px 520px at 12% 12%, rgba(37, 99, 235, 0.5), transparent 60%),
+            radial-gradient(760px 480px at 88% 18%, rgba(141, 216, 255, 0.24), transparent 58%),
+            linear-gradient(115deg, #020817 0%, #06152f 42%, #0b2b5f 100%) !important;
+}
+
+.ci-hero::before,
+.ci-services-hero::before,
+.ci-about-hero::before,
+.ci-careers-hero::before,
+.ci-contact-hero::before,
+.ci-frameworks-hero::before,
+.ci-framework-detail-hero::before,
+.ci-investor-hero::before,
+.ci-home-hero::before,
+.ci-industries-hero::before,
+.ci-insights-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+            linear-gradient(90deg, rgba(2, 8, 23, 0.94) 0%, rgba(2, 8, 23, 0.72) 50%, rgba(2, 8, 23, 0.3) 100%),
+            radial-gradient(circle at 30% 42%, rgba(96, 165, 250, 0.18), transparent 34rem);
+}
+
+.ci-hero-grid,
+.ci-frameworks-hero-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.ci-hero-content,
+.ci-hero .ci-hero-grid > div:first-child,
+.ci-frameworks-hero-inner > div {
+    position: relative;
+    z-index: 3;
+    padding: 34px;
+    border-radius: 30px;
+    background:
+            linear-gradient(135deg, rgba(2, 8, 23, 0.8), rgba(8, 26, 43, 0.48)),
+            radial-gradient(circle at top left, rgba(96, 165, 250, 0.2), transparent 28rem);
+    border: 1px solid rgba(187, 251, 255, 0.17);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.ci-hero .ci-heading-xl,
+.ci-services-hero .ci-heading-xl,
+.ci-about-hero .ci-heading-xl,
+.ci-careers-hero .ci-heading-xl,
+.ci-contact-hero .ci-heading-xl,
+.ci-frameworks-hero .ci-heading-xl,
+.ci-framework-detail-hero .ci-heading-xl,
+.ci-investor-hero .ci-heading-xl,
+.ci-home-hero .ci-heading-xl,
+.ci-industries-hero .ci-heading-xl,
+.ci-insights-hero .ci-heading-xl {
+    color: #ffffff !important;
+    text-shadow: 0 12px 46px rgba(0, 0, 0, 0.72);
+    text-wrap: balance;
+}
+
+.ci-hero .ci-gradient-text,
+.ci-services-hero .ci-gradient-text,
+.ci-about-hero .ci-gradient-text,
+.ci-careers-hero .ci-gradient-text,
+.ci-contact-hero .ci-gradient-text,
+.ci-frameworks-hero .ci-gradient-text,
+.ci-framework-detail-hero .ci-gradient-text,
+.ci-investor-hero .ci-gradient-text,
+.ci-home-hero .ci-gradient-text,
+.ci-industries-hero .ci-gradient-text,
+.ci-insights-hero .ci-gradient-text {
+    background: linear-gradient(90deg, #ffffff 0%, #bdf0ff 45%, #60d7ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    text-shadow: none;
+}
+
+.ci-hero .ci-lead,
+.ci-services-hero .ci-lead,
+.ci-about-hero .ci-lead,
+.ci-careers-hero .ci-lead,
+.ci-contact-hero .ci-lead,
+.ci-frameworks-hero .ci-lead,
+.ci-framework-detail-hero .ci-lead,
+.ci-investor-hero .ci-lead,
+.ci-home-hero .ci-lead,
+.ci-industries-hero .ci-lead,
+.ci-insights-hero .ci-lead {
+    color: rgba(245, 250, 255, 0.94) !important;
+    text-shadow: 0 8px 28px rgba(0, 0, 0, 0.38);
+    text-wrap: pretty;
+}
+
+.ci-home-title-brand,
+.ci-eyebrow-dark {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(96, 165, 250, 0.2)) !important;
+    border-color: rgba(187, 251, 255, 0.36) !important;
+    box-shadow: 0 18px 48px rgba(2, 8, 23, 0.34);
+}
+
+.ci-investor-panel,
+.ci-services-command,
+.ci-about-command,
+.ci-careers-panel,
+.ci-contact-hero-panel,
+.ci-industries-command {
+    background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.17), rgba(255, 255, 255, 0.07)),
+            radial-gradient(circle at 50% 28%, rgba(141, 216, 255, 0.28), transparent 44%),
+            linear-gradient(135deg, rgba(15, 42, 79, 0.92), rgba(5, 18, 42, 0.94)) !important;
+}
+
+.ci-section-header h2 {
+    text-wrap: balance;
+}
+
+.ci-section-header p,
+.ci-card p,
+.ci-service-main-card p,
+.ci-framework-card-link p,
+.ci-industry-sector-body p,
+.ci-insights-article-body p {
+    text-wrap: pretty;
+}
+
+.ci-industry-sector-card,
+.ci-insights-article {
+    scroll-margin-top: calc(var(--ci-navbar-height) + 24px);
+}
+
+.ci-page-toc {
+    position: sticky;
+    top: calc(var(--ci-navbar-height) + 16px);
+    z-index: 20;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 12px;
+    margin-bottom: 26px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    box-shadow: var(--ci-shadow-sm);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.ci-page-toc a {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 0 14px;
+    border-radius: var(--ci-radius-pill);
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--ci-blue-700);
+    border: 1px solid rgba(37, 99, 235, 0.14);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.ci-page-toc a:hover,
+.ci-page-toc a:focus-visible {
+    color: var(--ci-white);
+    background: linear-gradient(135deg, var(--ci-blue-600), var(--ci-blue-400));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+    }
+
+    .ci-floating,
+    .ci-floating-card,
+    .ci-pulse,
+    .ci-radar-sweep,
+    .ci-shine::after,
+    .ci-scan-card::after,
+    .ci-animated-gradient,
+    .ci-page-loader-card span {
+        animation: none !important;
+    }
+}
+
+.ci-nav-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.ci-nav-dropdown-trigger {
+    gap: 7px;
+}
+
+.ci-nav-dropdown-toggle {
+    width: 24px;
+    height: 24px;
+    display: inline-grid;
+    place-items: center;
+    border: 0;
+    padding: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: currentColor;
+    cursor: pointer;
+    transition: transform var(--ci-transition-fast), background var(--ci-transition-fast);
+}
+
+.ci-nav-dropdown.is-open .ci-nav-dropdown-toggle {
+    transform: rotate(180deg);
+    background: rgba(141, 216, 255, 0.18);
+}
+
+.ci-services-dropdown {
+    position: absolute;
+    top: calc(100% + 22px);
+    left: 50%;
+    width: min(820px, calc(100vw - 32px));
+    transform: translateX(-50%) translateY(14px) scale(0.98);
+    transform-origin: top center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    padding: 18px;
+    border-radius: 26px;
+    background:
+            radial-gradient(520px 220px at 12% 0%, rgba(96, 165, 250, 0.18), transparent 58%),
+            radial-gradient(420px 220px at 100% 12%, rgba(187, 251, 255, 0.16), transparent 58%),
+            rgba(2, 8, 23, 0.98);
+    border: 1px solid rgba(187, 251, 255, 0.18);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    transition: opacity var(--ci-transition), transform var(--ci-transition), visibility var(--ci-transition);
+}
+
+.ci-nav-dropdown.is-open .ci-services-dropdown,
+.ci-nav-dropdown:hover .ci-services-dropdown,
+.ci-nav-dropdown:focus-within .ci-services-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.ci-services-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    transform: translateX(-50%) rotate(45deg);
+    background: rgba(2, 8, 23, 0.98);
+    border-left: 1px solid rgba(187, 251, 255, 0.18);
+    border-top: 1px solid rgba(187, 251, 255, 0.18);
+}
+
+.ci-services-dropdown-head {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    padding: 4px 4px 16px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ci-services-dropdown-head strong {
+    color: var(--ci-white);
+    font-size: 1rem;
+    font-weight: 950;
+}
+
+.ci-services-dropdown-head span {
+    color: rgba(231, 233, 251, 0.72);
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.ci-services-dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.ci-services-dropdown-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 58px;
+    padding: 12px;
+    border-radius: 18px;
+    color: rgba(255, 255, 255, 0.86);
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 14px;
+    font-weight: 850;
+    overflow: hidden;
+    transition: transform var(--ci-transition-fast), background var(--ci-transition-fast), border-color var(--ci-transition-fast), color var(--ci-transition-fast);
+}
+
+.ci-services-dropdown-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+            radial-gradient(220px 80px at 10% 0%, rgba(96, 165, 250, 0.22), transparent 58%),
+            linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(187, 251, 255, 0.08));
+    opacity: 0;
+    transition: opacity var(--ci-transition-fast);
+    pointer-events: none;
+}
+
+.ci-services-dropdown-link:hover,
+.ci-services-dropdown-link.active,
+.ci-services-dropdown-link:focus-visible {
+    color: var(--ci-white);
+    transform: translateY(-2px);
+    background: rgba(96, 165, 250, 0.16);
+    border-color: rgba(187, 251, 255, 0.28);
+}
+
+.ci-services-dropdown-link:hover::before,
+.ci-services-dropdown-link.active::before {
+    opacity: 1;
+}
+
+.ci-services-dropdown-icon,
+.ci-services-dropdown-link span:last-child {
+    position: relative;
+    z-index: 1;
+}
+
+.ci-services-dropdown-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    color: var(--ci-cyan-200);
+    background: rgba(187, 251, 255, 0.09);
+    border: 1px solid rgba(187, 251, 255, 0.14);
+}
+
+@media (max-width: 991px) {
+    .ci-nav-dropdown {
+        width: 100%;
+        display: grid;
+    }
+
+    .ci-nav-dropdown-trigger {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .ci-nav-dropdown-toggle {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .ci-services-dropdown {
+        position: static;
+        width: 100%;
+        max-height: 0;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        overflow: hidden;
+        padding: 0;
+        margin-top: 0;
+        border-width: 0;
+        box-shadow: none;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition: max-height var(--ci-transition), padding var(--ci-transition), margin-top var(--ci-transition), border-width var(--ci-transition);
+    }
+
+    .ci-services-dropdown::before {
+        display: none;
+    }
+
+    .ci-nav-dropdown.is-open .ci-services-dropdown {
+        max-height: 760px;
+        padding: 12px;
+        margin-top: 8px;
+        border-width: 1px;
+        background: rgba(255, 255, 255, 0.045);
+        border-color: rgba(255, 255, 255, 0.1);
+        border-radius: 18px;
+    }
+
+    .ci-services-dropdown-head {
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+        padding-bottom: 12px;
+    }
+
+    .ci-services-dropdown-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ci-services-dropdown-link {
+        justify-content: flex-start;
+        text-align: left;
+        min-height: 52px;
+    }
+}
+
+@media (max-width: 575px) {
+    .ci-services-dropdown-link {
+        font-size: 13px;
+    }
+
+    .ci-services-dropdown-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+    }
+}
